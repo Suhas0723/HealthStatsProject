@@ -1,0 +1,11 @@
+Internal Server Error: /patient/blood-pressure/1234
+Traceback (most recent call last):
+  File "/home/suhasd/health_monitor_project/health_monitor/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/suhasd/health_monitor_project/health_monitor/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/suhasd/health_monitor_project/health_monitor/health_monitor/monitor/views.py", line 41, in bloodPressure
+    context["dia"] = data.get("dia")
+AttributeError: 'NoneType' object has no attribute 'get'
+Starting new HTTPS connection (1): health-api.hscc-atlanta.com:443
+https://health-api.hscc-atlanta.com:443 "GET /v2/patient/%25s/hr?1234 HTTP/1.1" 200 46
